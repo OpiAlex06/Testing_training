@@ -1,11 +1,9 @@
 ﻿using System;
 
-// =============================================================================
-// EJEMPLO CORTO: Reemplazar Código de Tipo con Subclases
-// =============================================================================
+// EJEMPLO CORTO: Reemplazar Código de Tipo con Subclases (Replace Type Code with Subclasses)
 
 
-// ── ANTES ────────────────────────────────────────────────────────────────────
+// ── ANTES ──
 class EmpleadoAntes
 {
     public string Tipo { get; set; }
@@ -22,7 +20,7 @@ class EmpleadoAntes
 }
 
 
-// ── DESPUÉS ───────────────────────────────────────────────────────────────────
+// ── DESPUÉS ──
 abstract class Empleado
 {
     public abstract int ObtenerBono();

@@ -1,6 +1,6 @@
 ﻿using System;
 
-// EJEMPLO CORTO: Reemplazar Condicional con Polimorfismo
+// EJEMPLO CORTO: Reemplazar Condicional con Polimorfismo (Replace Conditional with Polymorphism)
 
 // ── ANTES ──
 class PajaroAntes

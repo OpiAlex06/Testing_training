@@ -1,11 +1,9 @@
 ﻿using System;
 
-// =============================================================================
-// EJEMPLO CORTO: Reemplazar Método con Objeto Método
-// =============================================================================
+// EJEMPLO CORTO: Reemplazar Método con Objeto Método (Replace Method with Method Object)
 
 
-// ── ANTES ────────────────────────────────────────────────────────────────────
+// ── ANTES ──
 class PedidoAntes
 {
     public int Cantidad { get; set; }
@@ -24,7 +22,7 @@ class PedidoAntes
 }
 
 
-// ── DESPUÉS ───────────────────────────────────────────────────────────────────
+// ── DESPUÉS ──
 class Calculador
 {
     private int cantidad;
