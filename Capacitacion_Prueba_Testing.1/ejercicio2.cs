@@ -118,3 +118,5 @@ class EmpleadoGerente : Empleado
     public override int ObtenerBono() => 8000;
     public override int ObtenerDiasVacaciones() => 25;
 }
+
+
