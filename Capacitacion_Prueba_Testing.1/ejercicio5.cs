@@ -1,47 +1,47 @@
 ﻿using System;
 
-// EJEMPLO CORTO: Separar Consulta de Modificación ( Separate Query from Modifier (CQS))
+// EJEMPLO: Separar Consulta de Modificación
+
 
 // ── ANTES ──
-class SeguridadAntes
+class AccesoAntes
 {
-    private List<string> intrusos = new() { "Juan" };
+    private string claveCorrecta = "1234";
 
-    // Hace dos cosas: busca Y muestra alerta
-    public string Verificar(List<string> personas)
+    // Hace dos cosas: valida Y muestra mensaje
+    public bool VerificarClave(string clave)
     {
-        foreach (var p in personas)
+        if (clave == claveCorrecta)
         {
-            if (intrusos.Contains(p))
-            {
-                Console.WriteLine("Alerta!");
-                return p;
-            }
+            Console.WriteLine("Acceso permitido");
+            return true;
         }
-        return null;
+        else
+        {
+            Console.WriteLine("Acceso denegado");
+            return false;
+        }
     }
 }
 
 
 // ── DESPUÉS ──
-class Seguridad
+class Acceso
 {
-    private List<string> intrusos = new() { "Juan" };
+    private string claveCorrecta = "1234";
 
-    // Consulta: solo busca
-    public string Buscar(List<string> personas)
+    // Consulta: solo valida
+    public bool EsClaveCorrecta(string clave)
     {
-        foreach (var p in personas)
-        {
-            if (intrusos.Contains(p))
-                return p;
-        }
-        return null;
+        return clave == claveCorrecta;
     }
 
-    // Modificador: solo hace la acción
-    public void Alertar(string persona)
+    // Acción: solo muestra mensaje
+    public void MostrarResultado(bool esCorrecta)
     {
-        Console.WriteLine("Alerta!");
+        if (esCorrecta)
+            Console.WriteLine("Acceso permitido");
+        else
+            Console.WriteLine("Acceso denegado");
     }
 }
